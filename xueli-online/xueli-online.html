@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>雪梨在线</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .header-wrap {
+            background-color: rgb(243, 245, 247);
+            height: 100px;
+        }
+
+        .header {
+            position: relative;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            padding-top: 20px;
+            font-size: 40px;
+            color: rgb(0, 164, 255);
+            font-weight: bold;
+        }
+
+        .nav {
+            padding-top: 34px;
+            position: absolute;
+            left: 250px;
+            top: 0;
+        }
+
+        .nav a {
+            height: 38px;
+            display: inline-block;
+            color: rgb(5, 5, 5);
+            font-size: 18px;
+            margin-right: 28px;
+            text-align: center;
+        }
+
+        .index,
+        .course {
+            width: 54px;
+        }
+
+        .profession {
+            width: 92px;
+        }
+
+        .nav a:hover {
+            border-bottom: 2px solid rgb(0, 164, 255);
+        }
+
+        .search {
+            width: 360px;
+            height: 38px;
+            position: absolute;
+            top: 30px;
+            left: 686px;
+            border: 2px solid rgb(0, 164, 255);
+            background-color: rgb(243, 245, 247);
+            font-size: 14px;
+            color: rgb(191, 191, 191);
+            text-indent: 18px;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .button {
+            display: block;
+            position: absolute;
+            top: 30px;
+            left: 1050px;
+            height: 42px;
+            width: 40px;
+            background-color: rgb(0, 164, 255);
+            text-align: center;
+        }
+
+        .button img {
+            padding-top: 10px;
+        }
+
+        .person {
+            font-size: 14px;
+            color: rgb(102, 102, 102);
+            position: absolute;
+            top: 36px;
+            right: 20px;
+        }
+
+        .banner-wrap {
+            background-color: rgb(28, 3, 108);
+        }
+
+        .banner {
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .list {
+            position: absolute;
+            top: 0;
+            width: 170px;
+            height: 420px;
+            background-color: rgb(19, 1, 75);
+        }
+
+        .list a {
+            position: relative;
+            display: block;
+            color: white;
+            font-size: 14px;
+            margin-top: 25px;
+            margin-left: 20px;
+        }
+
+        .list a:hover {
+            color: rgb(0, 164, 255);
+        }
+
+        .list span {
+            position: absolute;
+            right: 15px;
+        }
+
+        .body-wrap {
+            height: 1527px;
+            background-color: rgb(243, 245, 247);
+        }
+
+        .body {
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .link {
+            position: absolute;
+            top: 8px;
+            width: 1200px;
+            height: 60px;
+            margin: 0 auto;
+            background-color: white;
+        }
+
+        #type {
+            padding-top: 20px;
+        }
+
+        #type a {
+            display: inline-block;
+            color: black;
+            width: 110px;
+            height: 16px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #type a:hover {
+            color: rgb(0, 164, 255);
+        }
+
+        #first {
+            padding-left: 34px;
+        }
+
+        #t {
+            border-left: 1px solid rgb(191, 191, 191);
+            text-align: center;
+        }
+
+        #change {
+            color: rgb(0, 164, 255);
+            font-size: 13px;
+            position: absolute;
+            top: 20px;
+            right: 50px;
+        }
+
+        .introduce {
+            position: absolute;
+            top: 108px;
+            font-size: 20px;
+        }
+
+        #see {
+            font-size: 13px;
+            color: rgb(177, 177, 177);
+            position: absolute;
+            top: 108px;
+            right: 30px;
+        }
+
+        .box {
+            position: absolute;
+            top: 150px;
+        }
+
+        .box>a {
+            display: block;
+            float: left;
+            height: 270px;
+            position: relative;
+        }
+
+        #image {
+            margin-right: 15px;
+        }
+
+        .text {
+            background-color: white;
+            height: 116px;
+        }
+
+        #text {
+            width: 190px;
+            font-size: 14px;
+            padding-left: 20px;
+            padding-top: 25px;
+            color: black;
+        }
+
+        #text-bottom {
+            position: absolute;
+            bottom: 20px;
+            padding-left: 20px;
+            font-size: 12px;
+        }
+
+        #advance {
+            color: rgb(255, 124, 45);
+        }
+
+        #number {
+            color: rgb(153, 153, 153);
+        }
+
+        .box2 {
+            position: absolute;
+            top: 450px;
+        }
+
+        .box2>a {
+            display: block;
+            float: left;
+        }
+
+        .font {
+            font-size: 20px;
+            position: absolute;
+            top: 750px;
+        }
+
+        .level {
+            position: absolute;
+            top: 750px;
+            left: 432px;
+        }
+
+        .level a {
+            margin-right: 68px;
+            color: rgb(134, 134, 134);
+        }
+
+        .level a:hover {
+            color: rgb(0, 164, 255);
+        }
+
+        #all {
+            font-size: 13px;
+            color: rgb(177, 177, 177);
+            position: absolute;
+            top: 750px;
+            right: 30px;
+        }
+
+        .box3 {
+            position: absolute;
+            top: 790px;
+        }
+
+        .box3>a {
+            display: block;
+            float: left;
+        }
+
+        .int {
+            font-size: 20px;
+            position: absolute;
+            top: 1100px;
+        }
+
+        .introduce-img {
+            position: absolute;
+            top: 1150px;
+            width: 1300px;
+        }
+
+        #imgs {
+            margin-right: 15px;
+        }
+
+        .introduce-img a {
+            display: block;
+            float: left;
+        }
+
+        .imgg {
+            position: relative;
+        }
+
+        #gray {
+            position: absolute;
+            top: 198px;
+            width: 228px;
+            height: 122px;
+            font-size: 12px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        #gray-text {
+            width: 185px;
+            padding-top: 20px;
+            padding-left: 20px;
+            color: white;
+        }
+
+        #gray-text-first {
+            margin-bottom: 15px;
+        }
+
+        #big {
+            font-size: 16px;
+        }
+
+        .bottom-wrap {
+            height: 420px;
+            background-color: white;
+        }
+
+        .bottom {
+            width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        #online {
+            font-size: 36px;
+            color: rgb(0, 164, 255);
+            position: absolute;
+            top: 127px;
+            left: 21px;
+        }
+
+        #little {
+            font-size: 12px;
+            position: absolute;
+            top: 197px;
+            left: 21px;
+        }
+
+        #load {
+            position: absolute;
+            top: 242px;
+            left: 21px;
+            width: 120px;
+            height: 34px;
+            border: 1px solid rgb(0, 164, 255);
+            background-color: white;
+            color: rgb(0, 164, 255);
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        .bottom-link {
+            position: absolute;
+            top: 127px;
+            left: 660px;
+        }
+
+        .bottom a {
+            display: block;
+            font-size: 12px;
+            color: black;
+            margin-bottom: 5px;
+        }
+
+        .bottom-link>div {
+            float: left;
+        }
+
+        #about,
+        #new {
+            margin-right: 148px;
+        }
+
+        #big-text {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header-wrap">
+        <div class="header">
+            <div class="logo">雪梨在线</div>
+            <div class="nav">
+                <a href="#" class="index" style="border-bottom: 2px solid rgb(0, 164, 255);">首页</a>
+                <a href="#" class="course">课程</a>
+                <a href="#" class="profession">职业规划</a>
+            </div>
+            <input type="text" class="search" value="输入关键词">
+            <a href="#" class="button">
+                <img src="images/serch.png" alt="">
+            </a>
+            <a href="#" class="person">个人中心</a>
+        </div>
+    </div>
+    <div class="banner-wrap">
+        <div class="banner">
+            <a href=""><img src="images/banner.png" alt=""></a>
+            <div class="list">
+                <a href="#" style="color:rgb(0, 164, 255);">前端开发<span>></span></a>
+                <a href="#">后端开发<span>></span></a>
+                <a href="#">移动开发<span>></span></a>
+                <a href="#">人工智能<span>></span></a>
+                <a href="#">商业预测<span>></span></a>
+                <a href="#">云计算&大数据<span>></span></a>
+                <a href="#">运维&从测试<span>></span></a>
+                <a href="#">UI设计<span>></span></a>
+                <a href="#">产品<span>></span></a>
+            </div>
+        </div>
+    </div>
+    <div class="body-wrap">
+        <div class="body">
+            <div class="link">
+                <div id="type">
+                    <a href="#" id="first" style="color: rgb(0, 164, 255);">精品推荐</a>
+                    <a href="#" id="t">JQuery</a>
+                    <a href="#" id="t">Spark</a>
+                    <a href="#" id="t">MySQL</a>
+                    <a href="#" id="t">JavaWeb</a>
+                    <a href="#" id="t">MySQL</a>
+                    <a href="#" id="t">JavaWeb</a>
+                </div>
+                <a href="#" id="change">修改兴趣</a>
+            </div>
+            <div class="introduce">精品推荐</div>
+            <a href="#" id="see">查看全部</a>
+            <div class="box">
+                <a href="#" id="image">
+                    <img src="images/1.png" alt="">
+                    <div class="text">
+                        <p id="text">Think PHP 5.0 博客系统实战项目演练</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/2.png" alt="">
+                    <div class="text">
+                        <p id="text">Android 网络图片加载框架详解</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/3.png" alt="">
+                    <div class="text">
+                        <p id="text">Angular 2 最新框架+主流技术+项目实战</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/4.png" alt="">
+                    <div class="text">
+                        <p id="text">Android Hybrid APP开发实战 H5+原生！</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image1">
+                    <img src="images/4.png" alt="">
+                    <div class="text">
+                        <p id="text">Android Hybrid APP开发实战 H5+原生！</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="box2">
+                <a href="#" id="image">
+                    <img src="images/1.png" alt="">
+                    <div class="text">
+                        <p id="text">Think PHP 5.0 博客系统实战项目演练</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/2.png" alt="">
+                    <div class="text">
+                        <p id="text">Android 网络图片加载框架详解</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/3.png" alt="">
+                    <div class="text">
+                        <p id="text">Angular 2 最新框架+主流技术+项目实战</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/4.png" alt="">
+                    <div class="text">
+                        <p id="text">Android Hybrid APP开发实战 H5+原生！</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image1">
+                    <img src="images/4.png" alt="">
+                    <div class="text">
+                        <p id="text">Android Hybrid APP开发实战 H5+原生！</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="font">前端开发工程师</div>
+            <div class="level">
+                <a href="#" style="color: rgb(0, 164, 255);">热门</a>
+                <a href="#">初级</a>
+                <a href="#">中级</a>
+                <a href="#">高级</a>
+            </div>
+            <a href="#" id="all">查看全部</a>
+            <div class="box3">
+                <a href="#" id="image">
+                    <img src="images/a.png" alt="">
+                    <div class="text">
+                        <p id="text">微软人工智能-数据分析平台</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/b.png" alt="">
+                    <div class="text">
+                        <p id="text">Unity Profilter入门</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/c.png" alt="">
+                    <div class="text">
+                        <p id="text">Cocos2d-x &nbsp;引擎源码中的纹理优化</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image">
+                    <img src="images/d.png" alt="">
+                    <div class="text">
+                        <p id="text">Kami2首页界面切换效果</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+                <a href="#" id="image1">
+                    <img src="images/e.png" alt="">
+                    <div class="text">
+                        <p id="text">Android Hybrid APP开发实战 H5+原生！</p>
+                        <p id="text-bottom">
+                            <span id="advance">高级</span>
+                            <span id="number">· 1125人正在学习</span>
+                        </p>
+                    </div>
+                </a>
+            </div>
+            <div class="int">牛人推荐</div>
+            <div class="introduce-img">
+                <a href="#" id="imgs"><img src="images/graduatio.png" alt=""></a>
+                <a href="#" id="imgs" class="imgg">
+                    <img src="images/p1.png" alt="">
+                    <div id="gray">
+                        <div id="gray-text">
+                            <div id="gray-text-first"><span id="big">闻老师</span>&nbsp;&nbsp;&nbsp;大数据</div>
+                            <div>高级互联网软件工程师，曾担任某物流公司CRM开发团队TL。多年JAVAEE、大数据领域研发......</div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" id="imgs" class="imgg">
+                    <img src="images/p2.png" alt="">
+                    <div id="gray">
+                        <div id="gray-text">
+                            <div id="gray-text-first"><span id="big">汪老师</span>&nbsp;&nbsp;&nbsp;前端</div>
+                            <div>高级软件架构师，全栈开发，多年大型项目管理经验。对WebComponents、Node.js......</div>
+                        </div>
+                    </div>
+                </a><a href="#" id="imgs" class="imgg">
+                    <img src="images/p3.png" alt="">
+                    <div id="gray">
+                        <div id="gray-text">
+                            <div id="gray-text-first"><span id="big">江老师</span>&nbsp;&nbsp;&nbsp;前端</div>
+                            <div>多年软件开发经验和教学经验，精通html，css，js,asp.net等编程语言和数据库系统......</div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-wrap">
+        <div class="bottom">
+            <div id="online">雪梨在线</div>
+            <div id="little">致力于普及中国最好的教育，与中国一流大学和机构合作提供在线课程。</div>
+            <button id="load">下载APP</button>
+            <div class="bottom-link">
+                <div id="about">
+                    <div id="big-text">关于雪梨网</div>
+                    <a href="#">关于</a>
+                    <a href="#">管理团队</a>
+                    <a href="#">工作机会</a>
+                    <a href="#">客户服务</a>
+                    <a href="#">帮助</a>
+                </div>
+                <div id="new">
+                    <div id="big-text">新手指南</div>
+                    <a href="#">如何注册</a>
+                    <a href="#">如何选课</a>
+                    <a href="#">如何拿到毕业证</a>
+                    <a href="#">学分是什么</a>
+                    <a href="#">考试未通过怎么办</a>
+                </div>
+                <div id="cooperation">
+                    <div id="big-text">合作伙伴</div>
+                    <a href="#">合作机构</a>
+                    <a href="#">合作导师</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
